@@ -45,11 +45,12 @@ public class Hooks {
 		
 		
 		
-//		Driver.quit();
+		Driver.quit();
 	}
 	
 	
-	
+	//Method added by Sana to get to the Expense Tab without re-writing code
+	//Feel free to use if needed
 	public static void loginAndOpenExpenseTab () {
 		Driver.getDriver().get(ConfigReader.getProperty("url"));
 		
