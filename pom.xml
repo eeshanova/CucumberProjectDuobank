@@ -125,7 +125,7 @@
 				<version>3.0.0-M5</version>
 
 				<configuration>
-
+					<testFailureIgnore>true</testFailureIgnore>
 
 					<!-- <parallel>methods</parallel> <useUnlimitedThreads>true</useUnlimitedThreads> 
 						-> for parallel run -->
@@ -153,7 +153,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>E-commerce Project</projectName>
+							<projectName>DuoBank Project</projectName>
 
 							<!-- output directory for the generated report -->
 							<outputDirectory>${project.build.directory}/pretty-html-report</outputDirectory>
