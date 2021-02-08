@@ -157,6 +157,7 @@
 							<projectName>DuoBank Project</projectName>
 
 							<!-- output directory for the generated report -->
+							<!-- output directory for the generated report -->
 							<outputDirectory>${project.build.directory}/pretty-html-report</outputDirectory>
 							<!-- optional, defaults to outputDirectory if not specified -->
 							<inputDirectory>${project.build.directory}</inputDirectory>
