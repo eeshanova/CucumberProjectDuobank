@@ -30,7 +30,7 @@ public class KatyaPreapprovalStepDefs {
 	public void theUserLandOnAccoundPage() {
 		KatyaPage page = new KatyaPage();
 		BrowserUtils.waitForPageToLoad(10);
-		page.LogInLink.click();
+		//page.LogInLink.click();
 		page.emailAddressLogIn.sendKeys("katya@test");
 		page.passwordLogIn.sendKeys("test");
 		page.login.click();
@@ -53,7 +53,7 @@ public class KatyaPreapprovalStepDefs {
 		
 		KatyaPage page = new KatyaPage();
 		BrowserUtils.waitForPageToLoad(10);
-		page.LogInLink.click();
+		//page.LogInLink.click();
 		page.emailAddressLogIn.sendKeys("katya@test");
 		page.passwordLogIn.sendKeys("test");
 		page.login.click();

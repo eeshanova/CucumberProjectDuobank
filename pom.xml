@@ -132,7 +132,7 @@
 						-> for parallel run -->
 					<includes>
 						<!-- name of your Runner class -->
-						<include>**/*CukeRunner.java</include>
+						<include>**/*ParallelRunner.java</include>
 					</includes>
 
 

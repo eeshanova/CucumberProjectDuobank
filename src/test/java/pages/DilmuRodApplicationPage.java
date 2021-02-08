@@ -84,18 +84,25 @@ public class DilmuRodApplicationPage {
 //	@FindBy(xpath = "//label[@id='eConsentdeclarerFirstName-error']")
 //	public WebElement fieldReqNameErrorMsg; //Rod
 	
-	@FindBy(id = "eConsentdeclarerFirstName-error")
+	@FindBy(id = "eConsentdeclarerFirstName")
 	public WebElement fieldReqNameErrorMsg; //Rod
 	
 	
-	@FindBy(id = "eConsentdeclarerLastName-error")
+	@FindBy(id = "eConsentdeclarerLastName")
 	public WebElement fieldReqLastNameErrorMsg; //Rod
 	
-	@FindBy(id = "eConsentdeclarerEmail-error")
+	@FindBy(id = "eConsentdeclarerEmail")
 	public WebElement fieldReqEmailErrorMsg; //Rod
 	
 	@FindBy(id = "consentagree-error")
 	public WebElement fieldReqAgreeErrorMsg; //Rod
 	
+	
+	@FindBy(xpath = "(//label[@class='custom-control-label'])[2]")
+	public WebElement dontAgreeButton; //Rod
+
+	
+	@FindBy(xpath = "(//span[@class='d-block'])[7]")
+	public WebElement summary;//Rod
 	
 }

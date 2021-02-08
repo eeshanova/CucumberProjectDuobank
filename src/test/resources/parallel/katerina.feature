@@ -11,7 +11,7 @@ Background:
 	And The User enters expenses info and clicks on Next button 
 	Then The User lands on "EMPLOYMENT AND INCOME" tab 
 	
-@katerina	
+@katerina @smoke
 Scenario: Verify the employment and income tab using Pojo 
 	When the User inputs the following data and clicks on Next button 
 		|employer	  |position	             |city	        |state	  |startDate  |monthlyIncome|
@@ -25,12 +25,13 @@ Scenario: Verify the employment and income tab using Pojo
 		
 		
 	Then The User lands on Credit Report tab 
-@katerina
+	
+@katerina @regression
 Scenario: Verify the list of States using Excel file 
 
 	Then The list of dropdown values for state should be the same as in Excel file 
 	
-@katerina	
+@katerina	@parallel
 Scenario: Verify Income Source options 
 
 	Then The list of dropdown values for income source should be the following 
@@ -38,7 +39,9 @@ Scenario: Verify Income Source options
 		|Alimony/Child Support 				|
 		|Social Security/Disability Income  |
 		|Other Types of Income 				|
-@katerina		
+
+		
+@katerina @regression	
 Scenario: Verify Add Another Employer button 
 	When the User clicks on Add Another Employer button and enters the following info 
 		|employer	  |position	             |city	        |startDate  | endDate	|
@@ -46,7 +49,7 @@ Scenario: Verify Add Another Employer button
 		
 	Then the User clicks on Clear button and Remove button and gets a confirmation message 
 	
-@katerina @temp
+@katerina @temp @parallel
 Scenario: Verify the user is able to input the info in all fields 
 	When the User enter the following info and clicks on Next Button 
 		|employer	  |position	             |city	        |startDate  |monthlyIncome| monthlyOvertime | monthlyBonus | monthlyComm | monthlyDiv | incomeSource 			| amount |

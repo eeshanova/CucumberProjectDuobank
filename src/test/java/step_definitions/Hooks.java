@@ -52,7 +52,7 @@ public class Hooks {
 	//Method added by Sana to get to the Expense Tab without re-writing code
 	//Feel free to use if needed
 	public static void loginAndOpenExpenseTab () {
-		Driver.getDriver().get(ConfigReader.getProperty("url"));
+		Driver.getDriver().get("http://duobank-env.eba-bgkwzq3h.us-east-2.elasticbeanstalk.com/register.php");
 		
 		KatyaPage page = new KatyaPage();
 		SanaPage sp = new SanaPage();

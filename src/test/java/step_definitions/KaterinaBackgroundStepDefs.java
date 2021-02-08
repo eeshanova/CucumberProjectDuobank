@@ -23,7 +23,7 @@ public class KaterinaBackgroundStepDefs {
 		Driver.getDriver().get(ConfigReader.getProperty("url"));
 	}
 
-	@When("The user inputs {string} for email address and {string} for password")
+	@When("The User inputs {string} for email address and {string} for password")
 	public void theUserInputsForEmailAddressAndForPassword(String email, String password) {
 		KaterinaLoginPage lp = new KaterinaLoginPage();
 		lp.email.sendKeys(email);
@@ -32,13 +32,13 @@ public class KaterinaBackgroundStepDefs {
 //		BrowserUtils.waitFor(5);
 	}
 
-	@Then("The user clicks on login button")
+	@Then("The User clicks on login button")
 	public void theUserClicksOnLoginButton() {
 		new KaterinaLoginPage().loginButton.click(); 
 			   
 	}
 
-	@When("The user clicks on Mortgage Application and lands on {string} tab")
+	@When("The User clicks on Mortgage Application and lands on {string} tab")
 	public void theUserClicksOnMortgageApplicationAndLandsOnTab(String expectedResult) {
 		
 		KaterinaApplicationPage ap = new KaterinaApplicationPage();
@@ -48,7 +48,7 @@ public class KaterinaBackgroundStepDefs {
 	    
 	}
 
-	@When("The user enters preapproval details info, clicks on Next button and lands on {string} tab")
+	@When("The User enters preapproval details info, clicks on Next button and lands on {string} tab")
 	public void theUserEntersPreapprovalDetailsInfoClicksOnNextButtonAndLandsOnTab(String expectedResult) {
 		Faker fake = new Faker();
 		KaterinaApplicationPage ap = new KaterinaApplicationPage();
@@ -64,8 +64,8 @@ public class KaterinaBackgroundStepDefs {
 		assertEquals(expectedResult, actualResult);
 	}
 
-	@When("The user enters personal info, clicks on Next button and lands on {string} tab")
-	public void theUserEntersPersonalInfoClicksOnNextButtonAndLandsOnTab(String expectedResult) {
+	@When("The User fills out personal info, clicks on Next button and lands on {string} tab")
+	public void theUserFillsOutPersonalInfoClicksOnNextButtonAndLandsOnTab(String expectedResult) {
 		Faker fake = new Faker();
 		KaterinaApplicationPage ap = new KaterinaApplicationPage();
 		ap.firstName.sendKeys(fake.name().firstName());
@@ -83,7 +83,7 @@ public class KaterinaBackgroundStepDefs {
 		assertEquals(expectedResult, actualResult);
 	}
 
-	@When("The user enters expenses info and clicks on Next button")
+	@When("The User enters expenses info and clicks on Next button")
 	public void theUserEntersExpensesInfoAndClicksOnNextButton() {
 		Faker fake = new Faker();
 		KaterinaApplicationPage ap = new KaterinaApplicationPage();
@@ -93,7 +93,7 @@ public class KaterinaBackgroundStepDefs {
 	}
 
 
-	@Then("The user lands on {string} tab")
+	@Then("The User lands on {string} tab")
 	public void theUserLandsOnTab(String expectedResult) {
 //		BrowserUtils.waitFor(5);
 		KaterinaApplicationPage ap = new KaterinaApplicationPage();

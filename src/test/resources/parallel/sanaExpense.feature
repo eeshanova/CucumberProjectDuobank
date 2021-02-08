@@ -1,6 +1,6 @@
 Feature: Verification of Expense Tab
 	
-@sana
+@sana @parallel
 Scenario: Verify the user sees the Mortage Payment Field 
 	Given The user logs in their account and fills out the first two tabs
 	When The user lands on Expenses Tab
@@ -9,7 +9,7 @@ Scenario: Verify the user sees the Mortage Payment Field
 	
 	
 
-@sana
+@sana @parallel
 Scenario: Verify the user is unable to proceed if the payment amount is invalid
 	Given The user logs in their account and fills out the first two tabs
 	When The user lands on Expenses Tab

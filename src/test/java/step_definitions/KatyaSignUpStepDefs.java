@@ -21,7 +21,7 @@ public class KatyaSignUpStepDefs {
 	 @Given("The User is on the Sign Up page") public void
 	 theUserIsOnTheSignUpPage() {
 	 
-		 Driver.getDriver().get(ConfigReader.getProperty("url"));
+		 Driver.getDriver().get("http://duobank-env.eba-bgkwzq3h.us-east-2.elasticbeanstalk.com/register.php");
 	 }
 	 
 

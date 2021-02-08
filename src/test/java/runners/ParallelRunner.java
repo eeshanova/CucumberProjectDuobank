@@ -10,7 +10,6 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions (
 		
 		
-		
 		features = "src/test/resources/parallel",  // feature file folder path
 		glue = "step_definitions", // step def classes folder path
 		

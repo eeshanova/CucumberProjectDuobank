@@ -30,7 +30,7 @@ public class SanaStepDefs {
 	
 	@Given("The user logs in their account and fills out the Preapproval Details")
 	public void theUserLogsInTheirAccountAndFillsOutThePreapprovalDetails() {
-		Driver.getDriver().get(ConfigReader.getProperty("url"));
+		Driver.getDriver().get("http://duobank-env.eba-bgkwzq3h.us-east-2.elasticbeanstalk.com/register.php");
 		
 		KatyaPage page = new KatyaPage();
 		BrowserUtils.waitForPageToLoad(10);

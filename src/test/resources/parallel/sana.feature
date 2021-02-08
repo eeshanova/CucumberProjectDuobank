@@ -1,13 +1,13 @@
 Feature: Verification of Personal Information Tab
 
-@sana
+@sana @smoke @parallel @regression
 Scenario: Verify Co-Borrower input form appears when user clicks on Co-Borrower
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
 	Then The user checks the Co-Borrower box
 	Then The Co-Borrower input form appears
 	
-@sana
+@sana @smoke @parallel @regression
 Scenario: Verify the user is unable to proceed if form is not complete
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
@@ -15,7 +15,7 @@ Scenario: Verify the user is unable to proceed if form is not complete
 	Then The error message is displayed
 	
 
-@sana
+@sana @smoke @parallel @regression
 Scenario: Verify the user is unable to proceed if DOB is a future date
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
@@ -27,7 +27,7 @@ Scenario: Verify the user is unable to proceed if DOB is a future date
 	Then The error message is displayed to enter correct DOB
 	
 	
-@sana
+@sana @smoke
 Scenario: Verify the user is unable to proceed if the SSN field contains alphabet 
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
@@ -37,7 +37,7 @@ Scenario: Verify the user is unable to proceed if the SSN field contains alphabe
 	Then The error message is displayed to enter valid SSN
 	
 	
-@sana
+@sana @regression
 Scenario: Verify the user is unable to proceed if the name fields contains numbers
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
@@ -47,7 +47,7 @@ Scenario: Verify the user is unable to proceed if the name fields contains numbe
 	Then The error message is displayed to enter valid name
 	
 
-@sana
+@sana @smoke
 Scenario: Verify the user is unable to proceed if the cell phone field contains alphabet
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
@@ -57,7 +57,7 @@ Scenario: Verify the user is unable to proceed if the cell phone field contains 
 	Then The error message is displayed to enter valid cellphone number
 
 
-@sana
+@sana @regression
 Scenario: Verify the user is unable to proceed if the Policy button is unchecked
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
@@ -66,7 +66,7 @@ Scenario: Verify the user is unable to proceed if the Policy button is unchecked
 	
 	
 	
-@sana
+@sana @smoke
 Scenario: Verify the user lands on the Privacy Policy webpage
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab

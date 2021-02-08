@@ -25,7 +25,7 @@ public class DilmuRodStepDefs {
 	
 
 
-	@Given("The User is on the homepage")
+	@Given("The user is on the homepage")
 	public void theUserIsOnTheHomepage() {
 		Driver.getDriver().get(ConfigReader.getProperty("url"));
 	}
@@ -139,6 +139,8 @@ public class DilmuRodStepDefs {
 	@When("The user is on CREDIT REPORT tab")
 	public void theUserIsOnCREDITREPORTTab() {
 		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
+		
+		BrowserUtils.waitFor(5);
 		ap.credit.click();
 
 	}
@@ -191,4 +193,63 @@ public class DilmuRodStepDefs {
 		assertEquals(expectedResult, actualErrorMsgOnEconsentTab);
 
 	}
+	
+	
+	
+	
+	
+	
+	@When("The input information should be invalid value")
+	public void theInputInformationShouldBeInvalidValue() {
+	    
+		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
+		
+		
+		ap.nextButton.click();
+		BrowserUtils.waitFor(5);
+		
+		ap.fieldReqNameErrorMsg.sendKeys("Первый");
+		ap.fieldReqLastNameErrorMsg.sendKeys("Второй");
+		ap.fieldReqEmailErrorMsg.sendKeys("12@gmail.com");
+		
+		
+		
+		
+	}
+
+	@When("The user selects {string} and click on next button")
+	public void theUserSelectsAndClickOnNextButton(String string) {
+		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
+		
+		ap.dontAgreeButton.click();
+		ap.nextButton.click();
+		BrowserUtils.waitFor(5);
+	}
+
+	@Then("The application goes to next SUMMARY page")
+	public void theApplicationGoesToNextSUMMARYPage() {
+		
+		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
+	    
+		String str = ap.summary.getText();
+		String expectedResult = "SUMMARY";
+		
+		assertEquals(expectedResult, str);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

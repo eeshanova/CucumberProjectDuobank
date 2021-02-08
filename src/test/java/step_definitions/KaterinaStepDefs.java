@@ -22,7 +22,7 @@ import utilities.ExcelUtils;
 
 public class KaterinaStepDefs {
 	
-	@When("the user inputs the following data and clicks on Next button")
+	@When("the User inputs the following data and clicks on Next button")
 	public void theUserInputsTheFollowingDataAndClicksOnNextButton(List<EmployerKaterina> dataTable) {
 //		EmployerKaterina employer = dataTable.get(0);
 		KaterinaEmployerPage ep = new KaterinaEmployerPage();
@@ -41,7 +41,7 @@ public class KaterinaStepDefs {
 	}
 	}
 	
-	@Then("The user lands on Credit Report tab")
+	@Then("The User lands on Credit Report tab")
 	public void theUserLandsOnCreditReportTab() {
 		BrowserUtils.waitFor(5);
 		KaterinaEmployerPage ep = new KaterinaEmployerPage();
@@ -90,8 +90,8 @@ public class KaterinaStepDefs {
 			}
 			}
 		
-        for (int i = 0; i<actualIncome1.size(); i++) {
-        	
+        for (int i = 0; i < 3; i++) {
+        	 
         	try {
 			assertTrue(expectedIncome.get(i).contains(actualIncome1.get(i)));
         	}
@@ -143,7 +143,7 @@ public class KaterinaStepDefs {
 //		}
         
 	}
-        @When("the user clicks on Add Another Employer button and enters the following info")
+        @When("the User clicks on Add Another Employer button and enters the following info")
         public void theUserClicksOnAddAnotherEmployerButtonAndEntersTheFollowingInfo(List<Map<String, String>> dataTable) {
         	KaterinaEmployerPage ep = new KaterinaEmployerPage();
         	ep.addEmployer.click();
@@ -160,7 +160,7 @@ public class KaterinaStepDefs {
         	
         }
 
-        @Then("the user clicks on Clear button and Remove button and gets a confirmation message")
+        @Then("the User clicks on Clear button and Remove button and gets a confirmation message")
         public void theUserClicksOnClearButtonAndRemoveButtonAGetsAConfirmationMessage() {
         	KaterinaEmployerPage ep = new KaterinaEmployerPage();
 
@@ -174,7 +174,7 @@ public class KaterinaStepDefs {
         	BrowserUtils.waitFor(5);
         }
         
-        @When("the user enter the following info and clicks on Next Button")
+        @When("the User enter the following info and clicks on Next Button")
         public void theUserEnterTheFollowingInfoAndClicksOnNextButton(List<Map<String, String>> dataTable) {
         	
         	KaterinaEmployerPage ep = new KaterinaEmployerPage();

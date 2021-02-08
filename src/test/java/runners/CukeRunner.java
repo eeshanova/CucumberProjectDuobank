@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @CucumberOptions (
 		
-		tags = "@sana",    //"@negative or @smoke", "@smoke and @negative and @login"
+		tags = "@sana or @kate or @katerina or @dilmuRod",    //"@negative or @smoke", "@smoke and @negative and @login"
 
 		
 		features = "src/test/resources/features",  // feature file folder path

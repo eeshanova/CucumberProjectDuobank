@@ -12,18 +12,18 @@ Background:
 	Then The user lands on "CREDIT REPORT" tab 
 	
 
-@dilmuRod @smoke 
+@dilmuRod @parallel
 Scenario: Verify the Credit tab option NO 
 	When user clicks on NO option for order credit report and clicks on NEXT button
 	Then The user lands on ECONSENT tab 
 	
-@dilmuRod @smoke
+@dilmuRod @parallel @regression
 Scenario: Verify the Credit tab option YES
 	When The user is on CREDIT REPORT tab 
 	Then The user clicks on YES option for credit report and clicks on NEXT button
 	Then The user lands on ECONSENT tab 
 
-@dilmuRod @smoke @test
+@dilmuRod1 @test @smoke @regression
 Scenario: Need to verify the required fields pop-up when they are not filled-out
 	When The user is on ECONSENT tab 
 	Then The user leaves required fields blank and clicks on NEXT button
