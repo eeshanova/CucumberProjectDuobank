@@ -65,6 +65,9 @@ public class DilmuRodApplicationPage {
 	@FindBy(id = "position1")
 	public WebElement position; //Rod
 	
+	@FindBy(id = "grossmonthlyincome")
+	public WebElement income; //Rod
+	
 	
 	@FindBy(xpath = "(//span[@class='icon-title'])[5]")
 	public WebElement credit;//Rod
@@ -78,17 +81,21 @@ public class DilmuRodApplicationPage {
 	@FindBy(xpath = "(//span[@class='icon-title'])[6]")
 	public WebElement econsent;//Rod
 	
-	@FindBy(xpath = "//label[@id='eConsentdeclarerFirstName-error']")
-	public WebElement fieldReqNameMsg; //Rod
+//	@FindBy(xpath = "//label[@id='eConsentdeclarerFirstName-error']")
+//	public WebElement fieldReqNameErrorMsg; //Rod
+	
+	@FindBy(id = "eConsentdeclarerFirstName-error")
+	public WebElement fieldReqNameErrorMsg; //Rod
+	
 	
 	@FindBy(id = "eConsentdeclarerLastName-error")
-	public WebElement fieldReqLastNameMsg; //Rod
+	public WebElement fieldReqLastNameErrorMsg; //Rod
 	
 	@FindBy(id = "eConsentdeclarerEmail-error")
-	public WebElement fieldReqEmailMsg; //Rod
+	public WebElement fieldReqEmailErrorMsg; //Rod
 	
 	@FindBy(id = "consentagree-error")
-	public WebElement fieldReqAgreeMsg; //Rod
+	public WebElement fieldReqAgreeErrorMsg; //Rod
 	
 	
 }

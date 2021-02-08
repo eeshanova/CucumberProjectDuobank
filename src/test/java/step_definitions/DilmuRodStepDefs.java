@@ -22,6 +22,8 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class DilmuRodStepDefs {
+	
+
 
 	@Given("The User is on the homepage")
 	public void theUserIsOnTheHomepage() {
@@ -110,6 +112,7 @@ public class DilmuRodStepDefs {
 		ap.employerName.sendKeys(String.valueOf(fake.company().name()));
 		// BrowserUtils.waitFor(5);
 		ap.position.sendKeys(String.valueOf(fake.company().profession()));
+		ap.income.sendKeys(String.valueOf(fake.number().numberBetween(20000, 1000000)));
 		ap.nextButton.click();
 
 	}
@@ -126,9 +129,9 @@ public class DilmuRodStepDefs {
 	@When("user clicks on NO option for order credit report and clicks on NEXT button")
 	public void userClicksOnNOOptionForOrderCreditReportAndClicksOnNEXTButton() {
 		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
-		BrowserUtils.jsClick(ap.noCheckBoxCredit);
-		// ap.noCheckBoxCredit.click();
 		BrowserUtils.waitFor(5);
+		BrowserUtils.jsClick(ap.noCheckBoxCredit);
+		// ap.noCheckBoxCredit.click();		
 		ap.nextButton.click();
 
 	}
@@ -143,6 +146,7 @@ public class DilmuRodStepDefs {
 	@Then("The user clicks on YES option for credit report and clicks on NEXT button")
 	public void theUserClicksOnYESOptionForCreditReportAndClicksOnNEXTButton() {
 		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
+		BrowserUtils.waitFor(5);
 		if (!(ap.yesCheckBoxCredit).isSelected()) {
 			BrowserUtils.jsClick(ap.yesCheckBoxCredit);
 		}
@@ -152,12 +156,12 @@ public class DilmuRodStepDefs {
 
 	@Then("The user lands on ECONSENT tab")
 	public void theUserLandsOnECONSENTTab() {
-
-		String expectedResult = "ECONSENT";
 		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
+		String expectedResult = "ECONSENT";		
 		String actualResult = ap.econsent.getText();
 		BrowserUtils.waitFor(5);
-		assertTrue(actualResult.contains("ECONSENT"));
+//		assertTrue(actualResult.contains("ECONSENT"));
+		assertEquals(expectedResult, actualResult);
 
 	}
 
@@ -171,21 +175,20 @@ public class DilmuRodStepDefs {
 	public void theUserLeavesRequiredFieldsBlankAndClicksOnNEXTButton() {
 		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
 		ap.nextButton.click();
+		ap.nextButton.click();
 		BrowserUtils.waitFor(5);
-	 
+			
 	}
 
 	@Then("The user sees the {string} are empty and displaying appropriate message;")
 	public void theUserSeesTheAreEmptyAndDisplayingAppropriateMessage(String expectedResult) {
 		DilmuRodApplicationPage ap = new DilmuRodApplicationPage();
+		ap.nextButton.click();
+		String actualErrorMsgOnEconsentTab = ap.fieldReqNameErrorMsg.getText();
+		System.out.println(actualErrorMsgOnEconsentTab);
+		System.out.println(expectedResult);
 		
-//		for (int i = 0; i < array.length; i++) {
-//			
-//		}
-		String actualResult = ap.fieldReqNameMsg.getText();
-		System.out.println(actualResult);
-		assertEquals(expectedResult, actualResult);
-		
-		 
+		assertEquals(expectedResult, actualErrorMsgOnEconsentTab);
+
 	}
 }
