@@ -22,6 +22,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		
 		         }  
 		
+	
+		
 //		,dryRun = true  // to run the test without launching, we need this to generate step def snippets
 		
 		,monochrome = true  // to display console characters correctly in Windows
