@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @CucumberOptions (
 		
-		tags = "@temp",    //"@negative or @smoke", "@smoke and @negative and @login"
+		tags = "@dilmuRod", //"@temp",    //"@negative or @smoke", "@smoke and @negative and @login"
 		
 		features = "src/test/resources/features",  // feature file folder path
 		glue = "step_definitions", // step def classes folder path
@@ -22,7 +22,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		
 		         }  
 		
-//		,dryRun = true  // to run the test without launching, we need this to generate step def snippets
+	//	,dryRun = true  // to run the test without launching, we need this to generate step def snippets
 		
 		,monochrome = true  // to display console characters correctly in Windows
 		
