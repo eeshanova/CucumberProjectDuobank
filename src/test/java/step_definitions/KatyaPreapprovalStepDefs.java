@@ -58,7 +58,7 @@ public class KatyaPreapprovalStepDefs {
 		page.passwordLogIn.sendKeys("test");
 		page.login.click();
 		
-		BrowserUtils.waitFor(5);
+		BrowserUtils.waitForPageToLoad(5);
 		
 		
 		
@@ -69,9 +69,9 @@ public class KatyaPreapprovalStepDefs {
 			System.out.println("No Password Alert was displayed");
 		}
 		
-		BrowserUtils.waitFor(5);
+		BrowserUtils.waitForPageToLoad(5);
 		page.mortgageButton.click();
-		BrowserUtils.waitFor(5);
+		BrowserUtils.waitForPageToLoad(5);
 	}
 
 	@When("The users click on all needed checkboxes")
