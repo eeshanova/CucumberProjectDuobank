@@ -19,7 +19,11 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>6.9.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
+		</dependency>
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -121,9 +125,10 @@
 				<version>3.0.0-M5</version>
 
 				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
 
-
-					<!-- <parallel>methods</parallel> <useUnlimitedThreads>true</useUnlimitedThreads> 
+					<!-- <parallel>methods</parallel> 
+					<useUnlimitedThreads>true</useUnlimitedThreads> 
 						-> for parallel run -->
 					<includes>
 						<!-- name of your Runner class -->
@@ -149,7 +154,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>E-commerce Project</projectName>
+							<projectName>DuoBank Project</projectName>
 
 							<!-- output directory for the generated report -->
 							<outputDirectory>${project.build.directory}/pretty-html-report</outputDirectory>
