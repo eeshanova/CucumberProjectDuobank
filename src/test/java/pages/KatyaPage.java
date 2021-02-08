@@ -48,7 +48,7 @@ public class KatyaPage {
 	@FindBy (xpath = "//span[@class='user-name']")
 	public WebElement userName;
 	
-	@FindBy (xpath = "//span[@class='menu-item'][contains(text(),'Mortgage Application')]")
+	@FindBy (xpath = "//a[@href='mortagage.php']")
 	public WebElement mortgageButton;
 	
 //***********************PreApproval Details*******************************************	

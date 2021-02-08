@@ -3,7 +3,9 @@ package step_definitions;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 
 import com.github.javafaker.Faker;
 
@@ -55,8 +57,21 @@ public class KatyaPreapprovalStepDefs {
 		page.emailAddressLogIn.sendKeys("katya@test");
 		page.passwordLogIn.sendKeys("test");
 		page.login.click();
+		
+		BrowserUtils.waitForPageToLoad(5);
+		
+		
+		
+		try {
+			Alert alert2 = Driver.getDriver().switchTo().alert();
+			alert2.dismiss();
+		} catch (NoAlertPresentException e) {
+			System.out.println("No Password Alert was displayed");
+		}
+		
+		BrowserUtils.waitForPageToLoad(5);
 		page.mortgageButton.click();
-		BrowserUtils.waitFor(2);
+		BrowserUtils.waitForPageToLoad(5);
 	}
 
 	@When("The users click on all needed checkboxes")

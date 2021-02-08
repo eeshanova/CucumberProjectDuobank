@@ -9,9 +9,13 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @CucumberOptions (
 		
+<<<<<<< HEAD
 
 		tags = "@test", //"@sana",    //"@negative or @smoke", "@smoke and @negative and @login"
 
+=======
+		tags = "@kate",    //"@negative or @smoke", "@smoke and @negative and @login"
+>>>>>>> 4db934eee937c679cc3c1ccf64e7548f2b691b54
 		
 		features = "src/test/resources/features",  // feature file folder path
 		glue = "step_definitions", // step def classes folder path
