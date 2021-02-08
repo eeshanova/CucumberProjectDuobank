@@ -55,6 +55,7 @@ public class KatyaPreapprovalStepDefs {
 		page.emailAddressLogIn.sendKeys("katya@test");
 		page.passwordLogIn.sendKeys("test");
 		page.login.click();
+		BrowserUtils.waitFor(2);
 		page.mortgageButton.click();
 		BrowserUtils.waitFor(2);
 	}

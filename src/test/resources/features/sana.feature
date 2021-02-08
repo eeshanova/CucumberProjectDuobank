@@ -1,13 +1,13 @@
 Feature: Verification of Personal Information Tab
 
-
+@sana
 Scenario: Verify Co-Borrower input form appears when user clicks on Co-Borrower
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
 	Then The user checks the Co-Borrower box
 	Then The Co-Borrower input form appears
 	
-
+@sana
 Scenario: Verify the user is unable to proceed if form is not complete
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
@@ -15,7 +15,7 @@ Scenario: Verify the user is unable to proceed if form is not complete
 	Then The error message is displayed
 	
 
-
+@sana
 Scenario: Verify the user is unable to proceed if DOB is a future date
 	Given The user logs in their account and fills out the Preapproval Details
 	When The user lands on Personal Information Tab
