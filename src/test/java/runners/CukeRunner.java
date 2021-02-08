@@ -9,7 +9,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @CucumberOptions (
 		
-		tags = "@temp",    //"@negative or @smoke", "@smoke and @negative and @login"
+		tags = "@sana",    //"@negative or @smoke", "@smoke and @negative and @login"
+
 		
 		features = "src/test/resources/features",  // feature file folder path
 		glue = "step_definitions", // step def classes folder path
@@ -21,9 +22,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				    "rerun:target/failed-scenarios.txt" 	// to create a text file with the path for failed scenarios to be re-run
 		
 		         }  
-		
-	
-		
+
 //		,dryRun = true  // to run the test without launching, we need this to generate step def snippets
 		
 		,monochrome = true  // to display console characters correctly in Windows

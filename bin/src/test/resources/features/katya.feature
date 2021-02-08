@@ -43,8 +43,8 @@ Scenario Outline: Verify multiple positive user preapproval details
 		|100000                   |10                       |
 		
 		
-@kate 
-Scenario Outline: Verify multiple negative user preapproval details 
+		@kate 
+		Scenario Outline: Verify multiple negative user preapproval details 
 		
 			Given The User is on the preapproval details tab 
 			When The users click on all needed checkboxes 

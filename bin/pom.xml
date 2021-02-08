@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.duobank</groupId>
+  <artifactId>cucumber-project-duobank</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  	<properties>
+=======
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -7,6 +16,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
+>>>>>>> 836c1e1d2952abb6fae577be9e2c078f37f62374
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -19,11 +29,15 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>6.9.1</version>
 		</dependency>
+<<<<<<< HEAD
+
+=======
 		<dependency>
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
 		</dependency>
+>>>>>>> 836c1e1d2952abb6fae577be9e2c078f37f62374
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -125,10 +139,9 @@
 				<version>3.0.0-M5</version>
 
 				<configuration>
-					<testFailureIgnore>true</testFailureIgnore>
 
-					<!-- <parallel>methods</parallel> 
-					<useUnlimitedThreads>true</useUnlimitedThreads> 
+
+					<!-- <parallel>methods</parallel> <useUnlimitedThreads>true</useUnlimitedThreads> 
 						-> for parallel run -->
 					<includes>
 						<!-- name of your Runner class -->
@@ -154,7 +167,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>DuoBank Project</projectName>
+							<projectName>E-commerce Project</projectName>
 
 							<!-- output directory for the generated report -->
 							<outputDirectory>${project.build.directory}/pretty-html-report</outputDirectory>
@@ -173,5 +186,9 @@
 			</plugin>
 		</plugins>
 	</build>
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 836c1e1d2952abb6fae577be9e2c078f37f62374
 </project>
